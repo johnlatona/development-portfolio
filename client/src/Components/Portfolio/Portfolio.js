@@ -7,7 +7,7 @@ import { ProjectContent, ProjectLink } from "../Projects";
 import ReactTooltip from 'react-tooltip';
 import "./Portfolio.css";
 
-let Link = Scroll.Link;
+let Link = Scroll.Link
 let Events = Scroll.Events;
 let scroll = Scroll.animateScroll;
 let scrollSpy = Scroll.scrollSpy;
@@ -541,7 +541,7 @@ class Portfolio extends Component {
                           <Grid.Column width={1}>
                             <Button icon={this.state.gmcButton.icon} onClick={this.handleClick} active={activeIndex === 6} index={6} className="gmcButton"/>
                           </Grid.Column>
-                          <Grid.Column width={12}>
+                          <Grid.Column width={12} className="lastCenterColResume">
                             <Accordion className="accordian" >
                               <Accordion.Title active={activeIndex === 6} index={6} className="accordianTitle">
                                 <p className="resumeEntryTitle"><b>MILLER BUICK GMC</b></p>
@@ -565,14 +565,13 @@ class Portfolio extends Component {
                 </Grid>
               </div>
             </Parallax>
-            <Parallax>
-              <div 
-                style={{
-                  "height": '700px', 
-                  "position": "relative", 
-                  "zIndex": "3"
-                }} 
-                id="skills">
+            <Parallax
+              blur={2}
+              bgImage={require('../../images/skillsBackground.jpg')}
+              bgImageAlt="NYC skyline"
+              strength={300}
+            >
+              <div style={{"height": '700px', "position": "relative", "zIndex": "3"}} id="skills">
               Blur transition from min to max
               </div>
             </Parallax>

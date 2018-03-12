@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Portfolio from "./Components/Portfolio";
 
-class App extends Component {
-  render() {
-    return (
-      <Portfolio />
-    );
-  }
-}
+const App = () =>
+  <Router>
+      <Route path="/" component={Portfolio} />
+  </Router>
 
 export default App;

@@ -189,7 +189,7 @@ button > a:hover {
 #resume {
     background-color: #4F8DD9;
     color: white;
-    height: 1200px;
+    height: 1300px;
 }
 
 #portfolio {
@@ -198,9 +198,9 @@ button > a:hover {
     padding-bottom: 20px;
 }
 
-#skills {
+/* #skills {
     background-color: teal;
-}
+} */
 
 #contact {
     background-color: white;
@@ -353,4 +353,8 @@ button > a:hover {
 .accordianContent {
     color: black;
     font-size: 20px;
+}
+
+.lastCenterColResume {
+    margin-bottom: 75px !important;
 }
