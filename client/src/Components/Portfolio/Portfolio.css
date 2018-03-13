@@ -120,10 +120,6 @@ button > a:hover {
     height: auto;
 }
 
-#skills, #contact {
-    height: 1000px;
-}
-
 .grid {
     margin-top: 0 !important;
 }
@@ -149,7 +145,7 @@ button > a:hover {
     -webkit-text-fill-color: transparent;
 }
 
-.myStoryGrid, .myStoryRow1, .myStoryLeftCol, .myStoryCenterCol, .myStoryRightCol {
+.myStoryGrid, .myStoryLeftCol, .myStoryCenterCol, .myStoryRightCol {
     height: 100%;
     padding: 0 !important;
 }
@@ -166,7 +162,7 @@ button > a:hover {
 
 #myStoryCenterBackgroundDiv {
     background: rgba(0, 0, 0, 0.4);
-    height: 100%
+    height: 100%;
 }
 
 #portfolio-title {
@@ -195,7 +191,7 @@ button > a:hover {
 #resume {
     background-color: #4F8DD9;
     color: white;
-    height: 1300px;
+    height: auto;
 }
 
 #portfolio {
@@ -211,7 +207,8 @@ button > a:hover {
 }
 
 #contact {
-    background-color: white;
+    background-color: #141414;
+    height: auto;
 }
 
 #para1, #para2 {
@@ -228,7 +225,7 @@ button > a:hover {
 }
 
 #para2 {
-    padding-bottom: 50px;
+    padding-bottom: 70px;
 }
 
 .portfolio-grid {
@@ -293,7 +290,7 @@ button > a:hover {
     height: 100%;
 }
 
-.mainResumeRow, .resumeGrid {
+.resumeGrid {
     height: 100%;
 }
 
@@ -429,4 +426,65 @@ button > a:hover {
 .techName {
     padding: 15px;
     padding-bottom: 15px;
+}
+
+#contact-title {
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 35px;
+    color: white;
+    padding-top: 40px !important;
+}
+
+#contact-subtitle {
+    font-family: "Raleway";
+    color: lightgray;
+    font-size: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contactLeftCol, .contactCenterCol, .contactRightCol, .contactMainRow, .contactGrid {
+    height: 100%
+}
+
+#contact-info {
+    text-align: center;
+}
+
+#email {
+    font-family: "Raleway";
+    font-size: 20px;
+    color: white;
+}
+
+#emailContainer {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+#email:hover {
+    color: lightgray;
+}
+
+.socialMediaLogos {
+    width: 125px;
+    padding: 20px;
+}
+
+#socialMediaLinks {
+    text-align: center;
+}
+
+#copyright {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#copyright-text {
+    font-family: "Raleway";
+    font-size: 12px;
+    color: white;
 }

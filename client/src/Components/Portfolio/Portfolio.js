@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Parallax } from 'react-parallax';
 import * as Scroll from "react-scroll";
 import { StickyContainer, Sticky } from 'react-sticky';
-import { Button, Grid, Accordion, Segment } from "semantic-ui-react";
+import { Button, Grid, Accordion, Segment, Icon } from "semantic-ui-react";
 import { ProjectContent, ProjectLink } from "../Projects";
 import ReactTooltip from 'react-tooltip';
 import "./Portfolio.css";
@@ -151,7 +151,7 @@ class Portfolio extends Component {
                         <Grid.Column width={16} textAlign="center">
                           <Button id="get-to-know-button">
                             <Link to="nav" spy={true} smooth={true} duration={1000} isDynamic={true}>
-                            Get To Know Me
+                            GET TO KNOW ME
                             </Link>
                           </Button>
                         </Grid.Column>
@@ -251,7 +251,7 @@ class Portfolio extends Component {
                         <div id="myStoryCenterBackgroundDiv">
                           <p id="para1">My name is John and I am a full-stack web developer from the greater New York City area. I have a background in Business Management, having received my undergraduate degree from Monmouth University in 2009. Since then I've been working in the automotive sales industry, with jobs in various departments in retail car dealerships. I took over a finance and insurance product agency in 2014 and was able to grow the business and merge with a larger company. I recently graduated from Rutgers University's accelerated Web Development program, and I am now excited to dive headfirst into the tech industry as a developer.</p>
 
-                          <p id="para2"> I've had an interest in technology and software for a long time and I am very eager to continue to build functional, beautiful applications that make people's lives easier. Some of my hobbies include playing and writing music, traveling, reading, and spending time with my friends, family and beautiful fiancee.</p>
+                          <p id="para2"> I've had an interest in technology and software for a long time and I am very eager to continue to build functional, beautiful applications that make people's lives easier. Some of my hobbies, other than coding, include playing and writing music, traveling, reading, and spending time with my friends, family and beautiful fiancee.</p>
                         </div>
                     </Grid.Column>
                     <Grid.Column width={3} className="myStoryRightCol">
@@ -302,19 +302,19 @@ class Portfolio extends Component {
                 <Grid columns="equal" celled className="portfolio-grid">
                   <Grid.Row>
                     <Grid.Column className="projectPicHolder">
-                      <ProjectContent link="https://johnlatona.github.io/GigCompass/" dataFor="GigCompass" img={require ("../../images/projectpics/GigCompass.png")} alt="GigCompass" description="An event search app that utilizes the Ticketmaster and Google Maps APIs to find concerts, theater, or sports events in the city of your choice" />
+                      <ProjectContent link="https://johnlatona.github.io/GigCompass/" dataFor="GigCompass" img={require ("../../images/projectpics/GigCompass.svg")} alt="GigCompass" description="An event search app that utilizes the Ticketmaster and Google Maps APIs to find concerts, theater, or sports events in the city of your choice" />
                       <ReactTooltip place="top" type="light" effect="float" id="GigCompass">
                         <span>Go to Live Site</span>
                       </ReactTooltip>
                     </Grid.Column>
                     <Grid.Column className="projectPicHolder">
-                      <ProjectContent link="http://s0cial3r.herokuapp.com/" dataFor="s0cial3r" img={require ("../../images/projectpics/s0cial3r-2.png")} alt="s0cial3r" description="A full-stack social media application that integrates with Twitch to allow users to watch Twitch streams while adding the personal connection component that Twitch lacks . Users can create their own profiles, post custom content to channel pages and engage in real-time chat with other viewers using socket.io technology"/>
+                      <ProjectContent link="http://s0cial3r.herokuapp.com/" dataFor="s0cial3r" img={require ("../../images/projectpics/s0cial3r.svg")} alt="s0cial3r" description="A full-stack social media application that integrates with Twitch to allow users to watch Twitch streams while adding the personal connection component that Twitch lacks . Users can create their own profiles, post custom content to channel pages and engage in real-time chat with other viewers using socket.io technology"/>
                       <ReactTooltip place="top" type="light" effect="float" id="s0cial3r">
                         <span>Go to Live Site</span>
                       </ReactTooltip>
                     </Grid.Column>
                     <Grid.Column className="projectPicHolder">
-                      <ProjectContent link="https://github.com/johnlatona/liri-node-app" dataFor="LIRI" img={require ("../../images/projectpics/LIRI.png")} alt="LIRI" description="An interactive CLI application that mimics the same basic functionality of Apple's SIRI and Amazon's Alexa."/>
+                      <ProjectContent link="https://github.com/johnlatona/liri-node-app" dataFor="LIRI" img={require ("../../images/projectpics/LIRI.svg")} alt="LIRI" description="An interactive CLI application that mimics the same basic functionality of Apple's SIRI and Amazon's Alexa."/>
                       <ReactTooltip place="top" type="light" effect="float" id="LIRI">
                         <span>Go to Github Repo</span>
                       </ReactTooltip>
@@ -346,19 +346,19 @@ class Portfolio extends Component {
                 <Grid columns="equal" celled className="portfolio-grid">
                   <Grid.Row>
                     <Grid.Column className="projectPicHolder">
-                      <ProjectContent link="https://johnlatona.github.io/TriviaGame/" dataFor="TriviaGame" img={require ("../../images/projectpics/TriviaGame.png")} alt="90's Music Trivia" description="A fun interactive 90s music trivia game using jQuery and Javascript for DOM manipulation and animations."/>
+                      <ProjectContent link="https://johnlatona.github.io/TriviaGame/" dataFor="TriviaGame" img={require ("../../images/projectpics/TriviaGame.svg")} alt="90's Music Trivia" description="A fun interactive 90s music trivia game using jQuery and Javascript for DOM manipulation and animations."/>
                       <ReactTooltip place="top" type="light" effect="float" id="TriviaGame">
                         <span>Go to Live Site</span>
                       </ReactTooltip>
                     </Grid.Column>
                     <Grid.Column className="projectPicHolder">
-                      <ProjectContent link="https://github.com/johnlatona/hangman-CLI" dataFor="Hangman" img={require ("../../images/projectpics/hangman-cli.png")} alt="Hangman" description="A CLI rendition of the classic Hangman game written using Node.js."/>
+                      <ProjectContent link="https://github.com/johnlatona/hangman-CLI" dataFor="Hangman" img={require ("../../images/projectpics/hangman.svg")} alt="Hangman" description="A CLI rendition of the classic Hangman game written using Node.js."/>
                       <ReactTooltip place="top" type="light" effect="float" id="Hangman">
                         <span>Go to Github Repo</span>
                       </ReactTooltip>
                     </Grid.Column>
                     <Grid.Column className="projectPicHolder">
-                      <ProjectContent link="https://johnlatona.github.io/clicky-react-game/" dataFor="ClickyGame" img={require ("../../images/projectpics/ClickyReactGame.png")} alt="Clicky React Game" description="A basic game built entirely with React.js that employs the Fisher-Yates shuffle Algorithm to shuffle images based on user clicks. The user must keep track of their clicks to make sure they don't click the same image twice."/>
+                      <ProjectContent link="https://johnlatona.github.io/clicky-react-game/" dataFor="ClickyGame" img={require ("../../images/projectpics/ClickyGame.svg")} alt="Clicky React Game" description="A basic game built entirely with React.js that employs the Fisher-Yates shuffle Algorithm to shuffle images based on user clicks. The user must keep track of their clicks to make sure they don't click the same image twice."/>
                       <ReactTooltip place="top" type="light" effect="float" id="ClickyGame">
                         <span>Go to Live Site</span>
                       </ReactTooltip>
@@ -574,7 +574,7 @@ class Portfolio extends Component {
                     </Grid.Column>
                     <Grid.Column width={10} className="skillsCenterCol">
                       <h1 id="skills-title">MY SKILLSET</h1>
-                      <h4 id="skills-subtitle">Specific technologies I've acquired in my Web Development toolkit</h4>
+                      <h4 id="skills-subtitle">Specific technologies I have in my Web Development toolkit</h4>
                       <hr className="line-break"/>
                     </Grid.Column>
                     <Grid.Column width={3} className="skillsRightCol">
@@ -593,6 +593,7 @@ class Portfolio extends Component {
                         <li className="techs"><img src={require("../../images/logos/jQuery.png")} alt="jQuery" className="techImg"/><span className="techName">jQuery</span></li>
                         <li className="techs"><img src={require("../../images/logos/bootstrap.svg")} alt="bootstrap" className="techImg"/><span className="techName">Bootstrap</span></li>
                         <li className="techs"><img src={require("../../images/logos/materialize.png")} alt="materialize" className="techImg" id="materialize"/><span className="techName">Materialize</span></li>
+                        <li className="techs"><img src={require("../../images/logos/semantic-ui.png")} alt="semantic-ui" className="techImg" id="materialize"/><span className="techName">Semantic UI</span></li>
                       </ul>
                     </Grid.Column>
                     <Grid.Column className="backEndTech">
@@ -618,13 +619,45 @@ class Portfolio extends Component {
               </div>
             </Parallax>
             <Parallax>
-              <div 
-                style={{ 
-                  "position": "relative", 
-                  "zIndex": "3"
-                }} 
-                id="contact">
-              Blur transition from min to max
+              <div style={{"position": "relative", "zIndex": "3"}} id="contact">
+              <Grid className="contactGrid">
+                  <Grid.Row className="contactMainRow" columns={3}>
+                    <Grid.Column width={3} className="contactLeftCol">
+                    </Grid.Column>
+                    <Grid.Column width={10} className="contactCenterCol">
+                      <Grid.Row columns={1}>
+                        <Grid.Column width={16}>
+                          <h1 id="contact-title">CONTACT ME</h1>
+                          <h4 id="contact-subtitle">I look forward to hearing from you!</h4>
+                          <hr className="line-break"/>
+                        </Grid.Column>
+                      </Grid.Row>
+                      <Grid.Row columns={1}>
+                        <Grid.Column width={16} textAlign="center">
+                          <div id="emailContainer">
+                            <Icon name="mail" size="huge" inverted color="black" className="mail-icon"/><a href="mailto:latona0204@gmail.com" id="email">latona0204@gmail.com</a>
+                          </div>
+                          <div id="socialMediaLinks">
+                            <a href="https://www.linkedin.com/in/john-latona/" target="_blank" rel="noopener noreferrer">
+                              <img src={require("../../images/logos/linkedin.png")} alt="linkedIn" className="socialMediaLogos"/>
+                            </a>
+                            <a href="https://github.com/johnlatona" target="_blank" rel="noopener noreferrer">
+                              <img src={require("../../images/logos/githubCircle.png")} alt="github" className="socialMediaLogos"/>
+                            </a>
+                            <a href="https://stackoverflow.com/users/8576109/john-latona" target="_blank" rel="noopener noreferrer">
+                              <img src={require("../../images/logos/stackoverflow.png")} alt="stack-overflow" className="socialMediaLogos"/>
+                            </a>
+                          </div>
+                          <div id="copyright">
+                            <p id="copyright-text">©Copyright 2018 John LaTona</p>
+                          </div>
+                        </Grid.Column>
+                      </Grid.Row>
+                    </Grid.Column>
+                    <Grid.Column width={3} className="contactRightCol">
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
               </div>
             </Parallax>
           </StickyContainer>
