@@ -17,12 +17,10 @@ if (process.env.NODE_ENV === "production") {
     })
 }
 
-app.use(express.static(path.join(__dirname, "public")));
-
 //local route handling
-router.get("/:route", function(req, res) {
-    res.sendFile(path.join(__dirname, "./client/src/public/index.html"))
-})
+router.use(function(req, res) {
+    res.sendFile(path.join(__dirname, "../client/src/"));
+});
 
 
 app.listen(PORT, function() {

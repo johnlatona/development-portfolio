@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Parallax } from 'react-parallax';
 import * as Scroll from "react-scroll";
 import { StickyContainer, Sticky } from 'react-sticky';
-import { Button, Grid, Accordion, Icon, Segment } from "semantic-ui-react";
+import { Button, Grid, Accordion, Segment } from "semantic-ui-react";
 import { ProjectContent, ProjectLink } from "../Projects";
 import ReactTooltip from 'react-tooltip';
 import "./Portfolio.css";
@@ -141,6 +141,7 @@ class Portfolio extends Component {
                       <Grid.Row>
                         <Grid.Column width={16}>
                         <div id="home-content">
+                          <img src={require("../../images/profile.png")} alt="self pic" id="profile-pic"/>
                           <h1 id="name">JOHN LATONA</h1>
                           <h4 id="subtitle">Full-stack Web Developer</h4>
                         </div>
@@ -193,32 +194,32 @@ class Portfolio extends Component {
                       <div id="nav-wrapper">
                         <nav id="nav" style={style} distanceFromTop={distanceFromTop} isSticky={isSticky} wasSticky={wasSticky} ref="nav">
                             <ul id="main-link-list">
-                                <li>
+                                <li className="link-list-items">
                                   <Link className="navlinks" activeClass="active" to="home" spy={true} smooth={true} duration={1500} delay={100} isDynamic={true} onClick={this.handleMenuClick}>
                                     HOME
                                   </Link>
                                 </li>
-                                <li>
+                                <li className="link-list-items">
                                   <Link className="navlinks" activeClass="active" to="myStory" offset={-75} spy={true} smooth={true} duration={1500} isDynamic={true} >
                                     MY STORY
                                   </Link>
                                 </li>
-                                <li>
+                                <li className="link-list-items">
                                   <Link className="navlinks" activeClass="active" to="portfolio" offset={-75} spy={true} smooth={true} duration={1500} isDynamic={true} >
                                     PORTFOLIO
                                   </Link>
                                 </li>
-                                <li>
+                                <li className="link-list-items">
                                   <Link className="navlinks" activeClass="active" to="resume" offset={-75} spy={true} smooth={true} duration={1500} isDynamic={true} >
                                     RESUME
                                   </Link>
                                 </li>
-                                <li>
+                                <li className="link-list-items">
                                   <Link className="navlinks" activeClass="active" to="skills" offset={-75} spy={true} smooth={true} duration={1500} isDynamic={true} >
                                     SKILLS
                                   </Link>
                                 </li>
-                                <li>
+                                <li className="link-list-items">
                                   <Link className="navlinks" activeClass="active" to="contact" offset={-75} spy={true} smooth={true} duration={1500} isDynamic={true} >
                                     CONTACT
                                   </Link>
@@ -565,20 +566,60 @@ class Portfolio extends Component {
                 </Grid>
               </div>
             </Parallax>
-            <Parallax
-              blur={2}
-              bgImage={require('../../images/skillsBackground.jpg')}
-              bgImageAlt="NYC skyline"
-              strength={300}
-            >
-              <div style={{"height": '700px', "position": "relative", "zIndex": "3"}} id="skills">
-              Blur transition from min to max
+            <Parallax >
+              <div style={{"position": "relative", "zIndex": "3"}} id="skills">
+                <Grid className="skillsGridTop">
+                  <Grid.Row className="skillsMainRow" columns={3}>
+                    <Grid.Column width={3} className="skillsLeftCol">
+                    </Grid.Column>
+                    <Grid.Column width={10} className="skillsCenterCol">
+                      <h1 id="skills-title">MY SKILLSET</h1>
+                      <h4 id="skills-subtitle">Specific technologies I've acquired in my Web Development toolkit</h4>
+                      <hr className="line-break"/>
+                    </Grid.Column>
+                    <Grid.Column width={3} className="skillsRightCol">
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
+                <Grid className="skillsGridBottom" columns="equal">
+                  <Grid.Row className="techSkills">
+                    <Grid.Column className="frontEndTech">
+                      <h2 className="skillsCatTitle">FRONT END TECHNOLOGIES</h2>
+                      <ul>
+                        <li className="techs"><img src={require("../../images/logos/html5.png")} alt="html5" className="techImg"/><span className="techName">HTML 5</span></li>
+                        <li className="techs"><img src={require("../../images/logos/css3.svg")} alt="css3" className="techImg"/><span className="techName">CSS 3</span></li>
+                        <li className="techs"><img src={require("../../images/logos/javascript.png")} alt="javascript" className="techImg"/><span className="techName">Javascript</span></li>
+                        <li className="techs"><img src={require("../../images/logos/react.png")} alt="react" className="techImg"/><span className="techName">ReactJS</span></li>
+                        <li className="techs"><img src={require("../../images/logos/jQuery.png")} alt="jQuery" className="techImg"/><span className="techName">jQuery</span></li>
+                        <li className="techs"><img src={require("../../images/logos/bootstrap.svg")} alt="bootstrap" className="techImg"/><span className="techName">Bootstrap</span></li>
+                        <li className="techs"><img src={require("../../images/logos/materialize.png")} alt="materialize" className="techImg" id="materialize"/><span className="techName">Materialize</span></li>
+                      </ul>
+                    </Grid.Column>
+                    <Grid.Column className="backEndTech">
+                    <h2 className="skillsCatTitle">BACK END TECHNOLOGIES</h2>
+                      <ul>
+                        <li className="techs"><img src={require("../../images/logos/node.png")} alt="node" className="techImg"/><span className="techName">NodeJS</span></li>
+                        <li className="techs"><img src={require("../../images/logos/express.png")} alt="express" className="techImg"/><span className="techName">ExpressJS</span></li>
+                        <li className="techs"><img src={require("../../images/logos/MySQL.png")} alt="MySQL" className="techImg"/><span className="techName">MySQL</span></li>
+                        <li className="techs"><img src={require("../../images/logos/mongodb.png")} alt="mongoDB" className="techImg"/><span className="techName">MongoDB</span></li>
+                      </ul>
+                    </Grid.Column>
+                    <Grid.Column className="projectManagementTech">
+                    <h2 className="skillsCatTitle" id="projectManagementTitle">PROJECT MANAGEMENT<br/>TOOLS</h2>
+                      <ul>
+                        <li className="techs"><img src={require("../../images/logos/bash.png")} alt="bash" className="techImg"/><span className="techName">Bash</span></li>
+                        <li className="techs"><img src={require("../../images/logos/git.png")} alt="git" className="techImg"/><span className="techName">Git</span></li>
+                        <li className="techs"><img src={require("../../images/logos/github.png")} alt="github" className="techImg"/><span className="techName">Github</span></li>
+                        <li className="techs"><img src={require("../../images/logos/heroku.png")} alt="heroku" className="techImg"/><span className="techName">Heroku</span></li>
+                      </ul>
+                    </Grid.Column>
+                  </Grid.Row>
+                 </Grid> 
               </div>
             </Parallax>
             <Parallax>
               <div 
-                style={{
-                  "height": '700px', 
+                style={{ 
                   "position": "relative", 
                   "zIndex": "3"
                 }} 

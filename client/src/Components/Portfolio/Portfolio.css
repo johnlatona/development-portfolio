@@ -6,7 +6,7 @@ ul {
     list-style-type: none;
 }
 
-li {
+.link-list-items {
     display: inline;
     padding: 4%;
     font-size: 16px;
@@ -50,9 +50,15 @@ button > a:hover {
 #home-content {
     color: white;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 30px;
     padding: 25px;
 }
+
+#profile-pic {
+    width: 250px;
+    border-radius: 125px;
+}
+
 .navlinks {
     color: #BFBFBF;
     font-size: 18px;
@@ -198,9 +204,11 @@ button > a:hover {
     padding-bottom: 20px;
 }
 
-/* #skills {
-    background-color: teal;
-} */
+#skills {
+    background-color: #737373;
+    background-image: url("../../images/brick-wall-dark.png");
+    height: auto;
+}
 
 #contact {
     background-color: white;
@@ -357,4 +365,68 @@ button > a:hover {
 
 .lastCenterColResume {
     margin-bottom: 75px !important;
+}
+
+#skills-title {
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 35px;
+    color: white;
+    padding-top: 40px !important;
+}
+
+#skills-subtitle {
+    font-family: "Raleway";
+    color: lightgray;
+    font-size: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.skillsLeftCol, skillsCenterCol, .skillsRightCol, .skillsMainRow, .skillsGrid {
+    height: 100%
+}
+
+.skillsGridBottom {
+    padding-top: 60px !important;
+}
+
+.skillsCatTitle {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding-bottom: 30px;
+    text-decoration: underline;
+}
+
+#projectManagementTitle {
+    padding-bottom: 0px;
+}
+
+.frontEndTech, .backEndTech, .projectManagementTech {
+    padding-left: 60px !important;
+    font-family: "Raleway"
+}
+
+.frontEndTech {
+    padding-bottom: 50px;
+}
+
+.techImg {
+    width: 75px;
+}
+
+#materialize {
+    height: 75px;
+}
+
+.techs {
+    font-size: 35px;
+    color: white;
+    padding: 15px;
+}
+
+.techName {
+    padding: 15px;
+    padding-bottom: 15px;
 }

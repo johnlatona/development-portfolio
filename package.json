@@ -7,16 +7,22 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.11.0"
+  },
   "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "installDeps": "yarn install && cd client && yarn install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johnlatona/development-portfolio.git"
   },
-  "author": "",
+  "author": "johnlatona",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/johnlatona/development-portfolio/issues"
