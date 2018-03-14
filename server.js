@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === "production") {
 
 //local route handling
 router.use(function(req, res) {
-    res.sendFile(path.join(__dirname, "../client/build/"));
+    res.sendFile(path.join(__dirname, "./client/build/"));
 });
 
 
