@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Parallax } from 'react-parallax';
 import * as Scroll from "react-scroll";
-import { StickyContainer, Sticky } from 'react-sticky';
 import { Button, Grid, Accordion, Segment, Icon } from "semantic-ui-react";
 import { ProjectContent, ProjectLink } from "../Projects";
 import ReactTooltip from 'react-tooltip';
@@ -125,12 +124,9 @@ class Portfolio extends Component {
 
       return (
         <div id="main">
-          <div id="background-video-container">
                 <video autoPlay loop muted preload="true" className="fullscreen-bg_video">
                     <source src="../../../videos/typingBackground.mp4"></source>
                 </video>
-                {/* <img src="../../../videos/image2.png" alt="testimg"/> */}
-            </div>
             <div id="nav-wrapper">
               <nav id="nav">
                 <ul id="main-link-list">
@@ -167,7 +163,7 @@ class Portfolio extends Component {
                 </ul>
               </nav>
             </div>
-              <div style={{ height: '92vh', position: "static", zIndex: "3"}} id="home">
+              <div style={{ height: '95vh', position: "static", zIndex: "3"}} id="home">
                 <Grid columns={3}>
                   <Grid.Row>
                     <Grid.Column width={2}>
@@ -225,7 +221,6 @@ class Portfolio extends Component {
                 </Grid>
               </div>
             </Parallax>
-            <Parallax strength={300}>
               <div id="portfolio">
                 <Grid columns={3}>
                   <Grid.Row>
@@ -240,88 +235,63 @@ class Portfolio extends Component {
                     </Grid.Column>
                   </Grid.Row>
                 </Grid>
-                <Grid columns="equal" className="projectTitleGridTop">
+                <Grid columns={6} centered className="portfolio-grid">
                   <Grid.Row>
-                    <Grid.Column>
+                    <Grid.Column className="projectPicHolder" computer={5} tablet={8} mobile={16}>
                       <ProjectLink link="https://github.com/johnlatona/GigCompass" name="GigCompass" dataFor="GigCompassTitle"/>
                       <ReactTooltip place="top" type="light" effect="float" id="GigCompassTitle">
                         <span>Go to Github Repo</span>
                       </ReactTooltip>
-                      {/* <a href="https://github.com/johnlatona/GigCompass" target="_blank" rel="noopener noreferrer"><h3 className="projectTitles">GigCompass</h3></a> */}
-                    </Grid.Column>
-                    <Grid.Column>
-                      <ProjectLink link="https://github.com/joeman098/s0cial3r" name="s0cial3r" dataFor="s0cial3rTitle"/>
-                      <ReactTooltip place="top" type="light" effect="float" id="s0cial3rTitle">
-                        <span>Go to Github Repo</span>
-                      </ReactTooltip>
-                    </Grid.Column>
-                    <Grid.Column>
-                      <ProjectLink link="https://github.com/johnlatona/liri-node-app" name="LIRI" dataFor="LIRITitle"/>
-                      <ReactTooltip place="top" type="light" effect="float" id="LIRITitle">
-                        <span>Go to Github Repo</span>
-                      </ReactTooltip>
-                    </Grid.Column>
-                  </Grid.Row>
-                </Grid>
-                <Grid columns="equal" celled className="portfolio-grid">
-                  <Grid.Row>
-                    <Grid.Column className="projectPicHolder">
                       <ProjectContent link="https://johnlatona.github.io/GigCompass/" dataFor="GigCompass" img={require ("../../images/projectpics/GigCompass.svg")} alt="GigCompass" description="An event search app that utilizes the Ticketmaster and Google Maps APIs to find concerts, theater, or sports events in the city of your choice" />
                       <ReactTooltip place="top" type="light" effect="float" id="GigCompass">
                         <span>Go to Live Site</span>
                       </ReactTooltip>
                     </Grid.Column>
-                    <Grid.Column className="projectPicHolder">
+                    <Grid.Column className="projectPicHolder" computer={5} tablet={8} mobile={16}>
+                      <ProjectLink link="https://github.com/joeman098/s0cial3r" name="s0cial3r" dataFor="s0cial3rTitle"/>
+                      <ReactTooltip place="top" type="light" effect="float" id="s0cial3rTitle">
+                        <span>Go to Github Repo</span>
+                      </ReactTooltip>
                       <ProjectContent link="http://s0cial3r.herokuapp.com/" dataFor="s0cial3r" img={require ("../../images/projectpics/s0cial3r.svg")} alt="s0cial3r" description="A full-stack social media application that integrates with Twitch to allow users to watch Twitch streams while adding the personal connection component that Twitch lacks . Users can create their own profiles, post custom content to channel pages and engage in real-time chat with other viewers using socket.io technology"/>
                       <ReactTooltip place="top" type="light" effect="float" id="s0cial3r">
                         <span>Go to Live Site</span>
                       </ReactTooltip>
                     </Grid.Column>
-                    <Grid.Column className="projectPicHolder">
+                    <Grid.Column className="projectPicHolder" computer={5} tablet={8} mobile={16}>
+                      <ProjectLink link="https://github.com/johnlatona/liri-node-app" name="LIRI" dataFor="LIRITitle"/>
+                      <ReactTooltip place="top" type="light" effect="float" id="LIRITitle">
+                        <span>Go to Github Repo</span>
+                      </ReactTooltip>
                       <ProjectContent link="https://github.com/johnlatona/liri-node-app" dataFor="LIRI" img={require ("../../images/projectpics/LIRI.svg")} alt="LIRI" description="An interactive CLI application that mimics the same basic functionality of Apple's SIRI and Amazon's Alexa."/>
                       <ReactTooltip place="top" type="light" effect="float" id="LIRI">
                         <span>Go to Github Repo</span>
                       </ReactTooltip>
                     </Grid.Column>
-                  </Grid.Row>
-                </Grid>
-                <Grid columns="equal" className="projectTitleGridBottom">
-                  <Grid.Row>
-                    <Grid.Column>
+                    <Grid.Column className="projectPicHolder" computer={5} tablet={8} mobile={16}>
                       <ProjectLink link="https://github.com/johnlatona/TriviaGame" name="90's Music Trivia" dataFor="TriviaGameTitle"/>
                       <ReactTooltip place="top" type="light" effect="float" id="TriviaGameTitle">
                         <span>Go to Github Repo</span>
                       </ReactTooltip>
-                    </Grid.Column>
-                    <Grid.Column>
-                      <ProjectLink link="https://github.com/johnlatona/hangman-CLI" name="Hangman" dataFor="HangmanTitle"/>
-                      <ReactTooltip place="top" type="light" effect="float" id="HangmanTitle">
-                        <span>Go to Github Repo</span>
-                      </ReactTooltip>
-                    </Grid.Column>
-                    <Grid.Column>
-                      <ProjectLink link="https://github.com/johnlatona/clicky-react-game" name="Clicky Game" dataFor="ClickyGameTitle"/>
-                      <ReactTooltip place="top" type="light" effect="float" id="ClickyGameTitle">
-                        <span>Go to Github Repo</span>
-                      </ReactTooltip>
-                    </Grid.Column>
-                  </Grid.Row>
-                </Grid>
-                <Grid columns="equal" celled className="portfolio-grid">
-                  <Grid.Row>
-                    <Grid.Column className="projectPicHolder">
                       <ProjectContent link="https://johnlatona.github.io/TriviaGame/" dataFor="TriviaGame" img={require ("../../images/projectpics/TriviaGame.svg")} alt="90's Music Trivia" description="A fun interactive 90s music trivia game using jQuery and Javascript for DOM manipulation and animations."/>
                       <ReactTooltip place="top" type="light" effect="float" id="TriviaGame">
                         <span>Go to Live Site</span>
                       </ReactTooltip>
                     </Grid.Column>
-                    <Grid.Column className="projectPicHolder">
+                    <Grid.Column className="projectPicHolder" computer={5} tablet={8} mobile={16}>
+                      <ProjectLink link="https://github.com/johnlatona/hangman-CLI" name="Hangman" dataFor="HangmanTitle"/>
+                      <ReactTooltip place="top" type="light" effect="float" id="HangmanTitle">
+                        <span>Go to Github Repo</span>
+                      </ReactTooltip>
                       <ProjectContent link="https://github.com/johnlatona/hangman-CLI" dataFor="Hangman" img={require ("../../images/projectpics/hangman.svg")} alt="Hangman" description="A CLI rendition of the classic Hangman game written using Node.js."/>
                       <ReactTooltip place="top" type="light" effect="float" id="Hangman">
                         <span>Go to Github Repo</span>
                       </ReactTooltip>
                     </Grid.Column>
-                    <Grid.Column className="projectPicHolder">
+                    <Grid.Column className="projectPicHolder" computer={5} tablet={8} mobile={16}>
+                      <ProjectLink link="https://github.com/johnlatona/clicky-react-game" name="Clicky Game" dataFor="ClickyGameTitle"/>
+                      <ReactTooltip place="top" type="light" effect="float" id="ClickyGameTitle">
+                        <span>Go to Github Repo</span>
+                      </ReactTooltip>
                       <ProjectContent link="https://johnlatona.github.io/clicky-react-game/" dataFor="ClickyGame" img={require ("../../images/projectpics/ClickyGame.svg")} alt="Clicky React Game" description="A basic game built entirely with React.js that employs the Fisher-Yates shuffle Algorithm to shuffle images based on user clicks. The user must keep track of their clicks to make sure they don't click the same image twice."/>
                       <ReactTooltip place="top" type="light" effect="float" id="ClickyGame">
                         <span>Go to Live Site</span>
@@ -330,8 +300,6 @@ class Portfolio extends Component {
                   </Grid.Row>
                 </Grid>
               </div>
-            </Parallax>
-            <Parallax>
               <div style={{"position": "relative", "zIndex": "3"}} id="resume">
                 <Grid columns={3} className="resumeGrid">
                   <Grid.Row className="mainResumeRow">
@@ -529,8 +497,6 @@ class Portfolio extends Component {
                   </Grid.Row>
                 </Grid>
               </div>
-            </Parallax>
-            <Parallax >
               <div style={{"position": "relative", "zIndex": "3"}} id="skills">
                 <Grid className="skillsGridTop">
                   <Grid.Row className="skillsMainRow" columns={3}>
@@ -581,8 +547,6 @@ class Portfolio extends Component {
                   </Grid.Row>
                  </Grid> 
               </div>
-            </Parallax>
-            <Parallax>
               <div style={{"position": "relative", "zIndex": "3"}} id="contact">
               <Grid className="contactGrid">
                   <Grid.Row className="contactMainRow" columns={3}>
@@ -623,7 +587,7 @@ class Portfolio extends Component {
                   </Grid.Row>
                 </Grid>
               </div>
-            </Parallax>
+
         </div> 
       )
     }

@@ -18,6 +18,10 @@ div.row {
     padding-top: 0 !important;
 }
 
+#nav-wrapper {
+    width: 100%;
+}
+
 #nav {
     position: fixed;
     top: 0;
@@ -115,18 +119,24 @@ button > a:hover {
     text-align: center;
 }
 
-#home, #nav, #main, #sticky-container, #myStory, #portfolio, #resume, #skills, #contact {
+#home, #main, #sticky-container, #myStory, #portfolio, #resume, #skills, #contact {
+    width: 100%;
+}
+
+#background-video-container {
     width: 100%;
 }
 
 .fullscreen-bg_video {
 	position: fixed;
 	top: 0;
-	left: 0;
+    left: 0;
+    right: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	z-index: -100;
+    z-index: -100;
+    overflow: hidden;
 }
 
 #myStory {
@@ -415,7 +425,7 @@ button > a:hover {
 }
 
 .frontEndTech, .backEndTech, .projectManagementTech {
-    padding-left: 60px !important;
+    text-align: center !important;
     font-family: "Raleway"
 }
 
@@ -508,7 +518,7 @@ button > a:hover {
 
 @media only screen and (max-width: 1050px) and (orientation: portrait) {
     #home-content {
-        margin-top: 300px;
+        margin-top: 250px;
     }
 
     #name {
@@ -522,5 +532,56 @@ button > a:hover {
         width: 40%;
         margin-left: 30%;
         margin-top: 30px;
+    }
+
+    .resumeDates {
+        font-size: 14px !important;
+    }
+
+    .techs {
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+
+    #apolloDate {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 1050px) and (orientation: landscape) {
+    .resumeDates {
+        font-size: 14px !important;
+    }
+
+    #apolloDate {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 780px) and (orientation: portrait) {
+    .navlinks {
+        font-size: 16px;
+    }
+
+    #home-content {
+        margin-top: 90px;
+    }
+
+    #name {
+        margin-top: 50px;
+    }
+
+    #get-to-know-button {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 30px;
+    }
+
+    #myStory-title {
+        font-size: 100px;
+    }
+
+    #para1, #para2 {
+        font-size: 22px;
     }
 }
