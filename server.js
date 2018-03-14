@@ -7,19 +7,13 @@ var app = express();
 //Serve static content for the app from the "public" directory in the application directory.
 if (process.env.NODE_ENV === "production") {
     console.log("YOU ARE IN THE PRODUCTION ENV");
-    app.use('/img', express.static(path.join(__dirname, './client/build/img')));
     app.use('/static', express.static(path.join(__dirname, './client/build/static')));
     app.use('/video', express.static(path.join(__dirname, './client/build/video')));
-    
-    //Production route handling
-    router.get("/:route", function(req, res) {
-        res.sendFile(path.join(__dirname, "./client/build/index.html"))
-    })
 }
 
 //local route handling
 router.use(function(req, res) {
-    res.sendFile(path.join(__dirname, "../client/src/"));
+    res.sendFile(path.join(__dirname, "../client/build/"));
 });
 
 
