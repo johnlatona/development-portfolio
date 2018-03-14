@@ -124,13 +124,48 @@ class Portfolio extends Component {
       const { activeIndex } = this.state;
 
       return (
-        <div>
-          <StickyContainer >
+        <div id="main">
           <div id="background-video-container">
                 <video autoPlay loop muted preload="true" className="fullscreen-bg_video">
                     <source src="../../../videos/typingBackground.mp4"></source>
                 </video>
                 {/* <img src="../../../videos/image2.png" alt="testimg"/> */}
+            </div>
+            <div id="nav-wrapper">
+              <nav id="nav">
+                <ul id="main-link-list">
+                  <li className="link-list-items">
+                    <Link className="navlinks" activeClass="active" to="home" offset={-75} spy={true} smooth={true} duration={2000} delay={100} isDynamic={true}>
+                      HOME
+                    </Link>
+                  </li>
+                  <li className="link-list-items">
+                    <Link className="navlinks" activeClass="active" to="myStory" offset={-75} spy={true} smooth={true} duration={2000} isDynamic={true} >
+                      MY STORY
+                    </Link>
+                  </li>
+                  <li className="link-list-items">
+                    <Link className="navlinks" activeClass="active" to="portfolio" offset={-60} spy={true} smooth={true} duration={2000} isDynamic={true} >
+                      PORTFOLIO
+                    </Link>
+                  </li>
+                  <li className="link-list-items">
+                    <Link className="navlinks" activeClass="active" to="resume" offset={-60} spy={true} smooth={true} duration={2000} isDynamic={true} >
+                      RESUME
+                    </Link>
+                  </li>
+                  <li className="link-list-items">
+                    <Link className="navlinks" activeClass="active" to="skills" offset={-40} spy={true} smooth={true} duration={2000} isDynamic={true} >
+                      SKILLS
+                    </Link>
+                  </li>
+                  <li className="link-list-items">
+                    <Link className="navlinks" activeClass="active" to="contact" offset={-25} spy={true} smooth={true} duration={2000} isDynamic={true} >
+                      CONTACT
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
             </div>
               <div style={{ height: '92vh', position: "static", zIndex: "3"}} id="home">
                 <Grid columns={3}>
@@ -150,7 +185,7 @@ class Portfolio extends Component {
                       <Grid.Row>
                         <Grid.Column width={16} textAlign="center">
                           <Button id="get-to-know-button">
-                            <Link to="nav" spy={true} smooth={true} duration={1000} isDynamic={true}>
+                            <Link to="myStory" offset={-75} spy={true} smooth={true} duration={1500} isDynamic={true}>
                             GET TO KNOW ME
                             </Link>
                           </Button>
@@ -162,77 +197,6 @@ class Portfolio extends Component {
                   </Grid.Row>
                 </Grid>
               </div>
-            <Parallax>
-              <Sticky topOffset={-690} disableCompensation={true}>
-                {
-                  ({
-                    style,
-                    distanceFromTop,
-                    isSticky,
-                    wasSticky
-                  }) => {
-                    if(distanceFromTop <= -690) {
-                      style={
-                        "position":"fixed", 
-                        "top":"0", 
-                        "left":"0", 
-                        "right":"0",
-                        "height":"75px",
-                        "color": "white",
-                        "zIndex":"4"
-                      }
-                    }
-                    else {
-                      style={
-                        "position":"relative",                        
-                        "height":"75px",
-                        "color": "white",
-                        "zIndex":"4"
-                      }
-                    }
-                    return (
-                      <div id="nav-wrapper">
-                        <nav id="nav" style={style} distanceFromTop={distanceFromTop} isSticky={isSticky} wasSticky={wasSticky} ref="nav">
-                            <ul id="main-link-list">
-                                <li className="link-list-items">
-                                  <Link className="navlinks" activeClass="active" to="home" spy={true} smooth={true} duration={1500} delay={100} isDynamic={true} onClick={this.handleMenuClick}>
-                                    HOME
-                                  </Link>
-                                </li>
-                                <li className="link-list-items">
-                                  <Link className="navlinks" activeClass="active" to="myStory" offset={-75} spy={true} smooth={true} duration={1500} isDynamic={true} >
-                                    MY STORY
-                                  </Link>
-                                </li>
-                                <li className="link-list-items">
-                                  <Link className="navlinks" activeClass="active" to="portfolio" offset={-75} spy={true} smooth={true} duration={1500} isDynamic={true} >
-                                    PORTFOLIO
-                                  </Link>
-                                </li>
-                                <li className="link-list-items">
-                                  <Link className="navlinks" activeClass="active" to="resume" offset={-75} spy={true} smooth={true} duration={1500} isDynamic={true} >
-                                    RESUME
-                                  </Link>
-                                </li>
-                                <li className="link-list-items">
-                                  <Link className="navlinks" activeClass="active" to="skills" offset={-75} spy={true} smooth={true} duration={1500} isDynamic={true} >
-                                    SKILLS
-                                  </Link>
-                                </li>
-                                <li className="link-list-items">
-                                  <Link className="navlinks" activeClass="active" to="contact" offset={-75} spy={true} smooth={true} duration={1500} isDynamic={true} >
-                                    CONTACT
-                                  </Link>
-                                </li>
-                            </ul>
-                      </nav>
-                    </div>
-                    )
-                  }
-                }
-              </Sticky>
-              <div id="hidden-div2" style={{"height": "95px", "display":"none"}}/>
-            </Parallax>
             <Parallax 
               bgImage={require('../../images/myStoryBackground.jpg')}
               bgImageAlt="NYC skyline"
@@ -649,7 +613,7 @@ class Portfolio extends Component {
                             </a>
                           </div>
                           <div id="copyright">
-                            <p id="copyright-text">©Copyright 2018 John LaTona</p>
+                            <p id="copyright-text">©2018 John LaTona. All rights reserved</p>
                           </div>
                         </Grid.Column>
                       </Grid.Row>
@@ -660,7 +624,6 @@ class Portfolio extends Component {
                 </Grid>
               </div>
             </Parallax>
-          </StickyContainer>
         </div> 
       )
     }
