@@ -20,7 +20,7 @@
     "client": "node scripts/start-client.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"nodemon server.js\" \"npm run client\"",
-    "installDeps": "yarn install && cd client && yarn install",
+    "installDeps": "yarn && cd client && yarn",
     "build": "node scripts/build.js"
   },
   "repository": {
