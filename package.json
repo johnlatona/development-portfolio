@@ -19,9 +19,10 @@
     "server": "node server.js",
     "client": "node scripts/start-client.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "\"nodemon server.js\" \"node client\"",
+    "start": "\"node server\" \"node client\"",
     "installDeps": "yarn && cd client && yarn",
-    "build": "node scripts/build.js"
+    "build": "node scripts/build.js",
+    "dev": "concurrently \"nodemon server.js\" \"npm run client\""
   },
   "repository": {
     "type": "git",
