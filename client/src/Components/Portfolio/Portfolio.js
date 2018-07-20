@@ -16,6 +16,10 @@ class Portfolio extends Component {
   state = {
     navPosition: "relative",
     activeIndex: -1,
+    fullstackButton: {
+      icon: "plus",
+      isActive: "false"
+    },
     rutgersButton: {
       icon: "plus",
       isActive: "false"
@@ -319,6 +323,29 @@ class Portfolio extends Component {
                         <Grid.Row columns={1}>
                           <Grid.Column width={16} className="section-title-col">
                             <h2 className="section-title">My Education</h2>
+                          </Grid.Column>
+                        </Grid.Row>
+                        <Grid.Row columns={3} className="resumeEntryRow">
+                          <Grid.Column width={3}>
+                            <Segment raised className="resumeDates">
+                              2018
+                            </Segment>
+                          </Grid.Column>
+                          <Grid.Column width={1}>
+                            <Button icon={this.state.fullstackButton.icon} onClick={this.handleClick} active={activeIndex === 0} index={0} className="fullstackButton"/>
+                          </Grid.Column>
+                          <Grid.Column width={12}>
+                            <Accordion className="accordian" >
+                              <Accordion.Title active={activeIndex === 0} index={0} className="accordianTitle">
+                                <p className="resumeEntryTitle"><b>RUTGERS UNIVERSITY</b></p>
+                                <p className="resumeEntrySubtitle">Full Stack Web Development</p>
+                              </Accordion.Title>
+                              <Accordion.Content active={activeIndex === 0} className="accordianContent">
+                                <p className="resumeEntryDescription">
+                                  An immersive, full-time 12 week Web Development certificate program that teaches skills including HTML5, CSS3, JavaScript, JQuery, Bootstrap, Node.js, MySQL, MongoDB, Express, Handlebars, and React.js.
+                                </p>
+                              </Accordion.Content>
+                            </Accordion>
                           </Grid.Column>
                         </Grid.Row>
                         <Grid.Row columns={3} className="resumeEntryRow">
